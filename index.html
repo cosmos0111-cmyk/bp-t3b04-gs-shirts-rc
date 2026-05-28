@@ -1,213 +1,645 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>비주류 문화 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream-bg: #fdfdfa;
-      --charcoal-fg: #1c1a17;
-      --gold-accent: #c29d6d;
-      --hairline-color: #e6e3db;
-      --serif-font: 'Nanum Myeongjo', serif;
-      --sans-font: 'Outfit', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강서 셔츠룸 추천 | bro들의 리얼 후기</title>
+    <meta name="description" content="강서 셔츠룸 추천! bro 생생한 후기 모음. 강서구 셔츠룸 정보부터 실시간 예약까지 한번에. 전화 010-6279-0862로 바로 콜.">
+    <meta name="keywords" content="강서 셔츠룸, 강서 셔츠룸 추천, 강서구 셔츠룸, 셔츠룸 후기, 강서 셔츠룸 가격, 강서 셔츠룸 예약">
+    <link rel="canonical" href="https://t3b04-gs-shirts-rc.pages.dev/">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="강서 셔츠룸 추천 | bro들의 리얼 후기">
+    <meta property="og:description" content="강서 셔츠룸 추천! bro 생생한 후기 모음. 강서구 셔츠룸 정보부터 실시간 예약까지 한번에.">
+    <meta property="og:url" content="https://t3b04-gs-shirts-rc.pages.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="강서 셔츠룸 추천 bro">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="강서 셔츠룸 추천 | bro들의 리얼 후기">
+    <meta name="twitter:description" content="강서 셔츠룸 추천! bro 생생한 후기 모음. 강서구 셔츠룸 정보부터 실시간 예약까지 한번에.">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "강서 셔츠룸 추천 bro",
+        "description": "강서구 대표 셔츠룸 정보 및 예약 플랫폼. bro들의 솔직한 후기를 확인하세요.",
+        "url": "https://t3b04-gs-shirts-rc.pages.dev/",
+        "telephone": "010-6279-0862",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "서울특별시",
+            "addressRegion": "강서구",
+            "addressCountry": "KR"
+        },
+        "areaServed": "강서구",
+        "priceRange": "₩₩",
+        "image": ""
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--cream-bg);
-      color: var(--charcoal-fg);
-      font-family: var(--sans-font);
-      line-height: 1.8;
-      padding: 0 40px;
-    }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 32px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: var(--serif-font);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-    nav { display: flex; gap: 32px; }
-    nav a {
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover { color: var(--gold-accent); }
-    main { padding-bottom: 80px; }
-    .kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--gold-accent);
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-family: var(--serif-font);
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.35;
-      letter-spacing: -0.02em;
-      color: var(--charcoal-fg);
-      margin-bottom: 40px;
-    }
-    .story-body {
-      font-family: var(--serif-font);
-      font-size: 1.15rem;
-      color: var(--charcoal-fg);
-      font-weight: 400;
-      text-align: justify;
-      margin-bottom: 60px;
-    }
-    .story-body p { margin-bottom: 24px; text-indent: 12px; }
-    .juice-link {
-      color: var(--gold-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-accent);
-      font-weight: 700;
-      transition: all 0.3s ease;
-    }
-    .juice-link:hover {
-      color: var(--charcoal-fg);
-      border-bottom-color: var(--charcoal-fg);
-    }
-    .editorials {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 60px;
-    }
-    .editorial-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold-accent);
-      margin-bottom: 40px;
-    }
-    .editorial-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .editorial-block {
-      text-decoration: none;
-      color: var(--charcoal-fg);
-      display: block;
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 30px;
-    }
-    .editorial-block:hover h3 { color: var(--gold-accent); }
-    .editorial-block h3 {
-      font-family: var(--serif-font);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      transition: color 0.3s ease;
-    }
-    .editorial-block p {
-      font-size: 0.95rem;
-      color: #555555;
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888888;
-    }
-    footer a { color: #888888; text-decoration: none; }
-    footer a:hover { color: var(--gold-accent); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 16px; }
-      h1 { font-size: 2rem; }
-      .story-body { font-size: 1.05rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* === NEON-VOID BRUTALIST CSS === */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: "Impact", "Arial Black", system-ui, sans-serif;
+            font-weight: normal;
+            line-height: 1.2;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* === VARIABLES === */
+        :root {
+            --primary: #000;
+            --secondary: #fff;
+            --accent: #ff3b00;
+            --gap: 48px;
+            --padding: 72px;
+            --section-gap: 120px;
+            --border-w: 4px;
+        }
+
+        /* === GLOBAL BRUTALISM === */
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(3.5rem, 12vw, 7rem);
+            line-height: 0.85;
+        }
+
+        h2 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+        }
+
+        h3 {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p, li, blockquote {
+            font-family: system-ui, sans-serif;
+            font-weight: 300;
+            font-size: 1.15rem;
+            line-height: 1.5;
+        }
+
+        img, svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        /* === SPACING === */
+        .wrapper {
+            padding-left: var(--padding);
+            padding-right: var(--padding);
+        }
+
+        section {
+            padding-top: var(--section-gap);
+            padding-bottom: var(--section-gap);
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--gap);
+        }
+
+        .grid {
+            display: grid;
+            gap: var(--gap);
+        }
+
+        /* === HEADER === */
+        header {
+            padding: 24px var(--padding);
+            border-bottom: var(--border-w) solid var(--accent);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            letter-spacing: -0.05em;
+            color: var(--secondary);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        nav a {
+            color: var(--secondary);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        /* === HAMBURGER (CSS only) === */
+        .hamburger {
+            display: none;
+            appearance: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 100;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 32px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 7px 0;
+            transition: 0.3s;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .overlay {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 70%;
+                max-width: 320px;
+                height: 100vh;
+                background: #111;
+                border-left: var(--border-w) solid var(--accent);
+                flex-direction: column;
+                justify-content: center;
+                gap: 32px;
+                padding: 48px 32px;
+                transform: translateX(100%);
+                transition: transform 0.4s ease;
+                z-index: 99;
+            }
+
+            nav a {
+                font-size: 1.8rem;
+            }
+
+            .menu-toggle:checked ~ nav {
+                transform: translateX(0);
+            }
+
+            .menu-toggle:checked ~ .overlay {
+                display: block;
+                position: fixed;
+                inset: 0;
+                background: rgba(0,0,0,0.7);
+                z-index: 98;
+            }
+
+            .hamburger:has(+ .menu-toggle:checked) span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px);
+            }
+            .hamburger:has(+ .menu-toggle:checked) span:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger:has(+ .menu-toggle:checked) span:nth-child(3) {
+                transform: rotate(-45deg) translate(8px, -8px);
+            }
+
+            .wrapper {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            section {
+                padding-top: 72px;
+                padding-bottom: 72px;
+            }
+
+            :root {
+                --padding: 24px;
+                --section-gap: 72px;
+                --gap: 32px;
+            }
+        }
+
+        /* === HERO === */
+        .hero {
+            background: var(--primary);
+            border-bottom: var(--border-w) solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 48px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            flex: 2 1 400px;
+        }
+
+        .hero-text h1 {
+            margin-bottom: 24px;
+            transform: skew(-6deg);
+            transform-origin: left;
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 0 16px;
+            margin-left: -16px;
+        }
+
+        .hero-sub {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 32px;
+            font-family: "Impact", "Arial Black", system-ui, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 18px 48px;
+            font-size: 2rem;
+            font-family: "Impact", "Arial Black", system-ui, sans-serif;
+            text-transform: uppercase;
+            border: var(--border-w) solid var(--secondary);
+            transform: rotate(-2deg);
+            transition: 0.2s;
+        }
+
+        .hero-cta:hover {
+            transform: rotate(0deg) scale(1.02);
+            background: var(--secondary);
+            color: var(--accent);
+            border-color: var(--accent);
+            text-decoration: none;
+        }
+
+        .hero-visual {
+            flex: 1 1 300px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            transform: rotate(4deg);
+        }
+
+        .hero-visual > div {
+            aspect-ratio: 1;
+            background: var(--accent);
+            border: var(--border-w) solid var(--secondary);
+        }
+
+        .hero-visual > div:nth-child(2) {
+            background: var(--secondary);
+            border-color: var(--accent);
+            margin-top: -32px;
+        }
+
+        .hero-visual > div:nth-child(3) {
+            background: var(--secondary);
+            border-color: var(--accent);
+            margin-left: -32px;
+        }
+
+        .hero-visual > div:nth-child(4) {
+            background: var(--accent);
+            border-color: var(--secondary);
+        }
+
+        /* === SECTION INTRO === */
+        .intro {
+            border-bottom: var(--border-w) solid var(--accent);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px 48px;
+        }
+
+        .intro-grid h2 {
+            grid-column: 1 / -1;
+            transform: skew(-4deg);
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px 24px;
+            margin-left: -24px;
+            width: fit-content;
+        }
+
+        .intro-box {
+            border: var(--border-w) solid var(--accent);
+            padding: 32px;
+            background: #111;
+        }
+
+        .intro-box h3 {
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .intro-box ul {
+            list-style: none;
+        }
+
+        .intro-box li {
+            padding: 8px 0;
+            border-bottom: 2px solid #222;
+        }
+
+        .intro-box li:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        /* === REVIEWS === */
+        .reviews {
+            border-bottom: var(--border-w) solid var(--accent);
+        }
+
+        .reviews h2 {
+            margin-bottom: 48px;
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 4px 32px;
+            transform: skew(6deg);
+            margin-left: -16px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 48px;
+        }
+
+        .review-card {
+            background: var(--secondary);
+            color: var(--primary);
+            border: var(--border-w) solid var(--accent);
+            padding: 32px 24px;
+            transform: rotate(var(--rot, 0deg));
+            transition: 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .review-card:nth-child(odd) {
+            --rot: -2deg;
+        }
+
+        .review-card:nth-child(even) {
+            --rot: 3deg;
+        }
+
+        .review-card:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 16px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .review-name {
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .review-date {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            font-family: system-ui, sans-serif;
+        }
+
+        .review-stars {
+            color: var(--accent);
+            font-size: 1.6rem;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+        }
+
+        .review-text {
+            font-family: system-ui, sans-serif;
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        /* === CTA SECTION === */
+        .cta {
+            border-bottom: var(--border-w) solid var(--accent);
+            text-align: center;
+        }
+
+        .cta h2 {
+            margin-bottom: 32px;
+            transform: skew(-5deg);
+        }
+
+        .cta .hero-cta {
+            font-size: 2.5rem;
+            transform: rotate(2deg);
+        }
+
+        .cta .hero-cta:hover {
+            transform: rotate(0deg);
+        }
+
+        /* === FOOTER === */
+        footer {
+            padding: 48px var(--padding);
+            border-top: var(--border-w) solid var(--accent);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        footer .copyright {
+            font-family: system-ui, sans-serif;
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        footer .footer-phone {
+            font-size: 1.5rem;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+            padding: 8px 24px;
+        }
+
+        footer .footer-phone:hover {
+            background: var(--accent);
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* === UTILITY === */
+        .no-wrap {
+            white-space: nowrap;
+        }
+
+        .accent-bg {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .skew-neg {
+            transform: skew(-4deg);
+        }
+
+        .skew-pos {
+            transform: skew(4deg);
+        }
+
+        /* === ASYMMETRIC EXTRA === */
+        .intro-box:first-of-type {
+            margin-top: 48px;
+        }
+
+        .intro-box:last-of-type {
+            margin-bottom: 48px;
+        }
+
+        /* negative margin samples in layout */
+        .hero .hero-visual {
+            margin-top: -24px;
+            margin-right: -24px;
+        }
+
+        @media (max-width: 768px) {
+            .hero .hero-visual {
+                margin: 0;
+                transform: rotate(0deg);
+            }
+            .hero-text h1 {
+                transform: skew(0);
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
     <header>
-      <a href="/" class="brand">EDITORIAL.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="kicker">BOUTIQUE KR / SELECTION ACCENT</div>
-      <h1>비주류 문화 지식 저널 및 아카이브</h1>
-      <div class="story-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>비주류 문화</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="editorials">
-        <div class="editorial-label">Recent Editorial Articles</div>
-        <div class="editorial-flow">
-          
-        <a href="posts/normal-1.html" class="editorial-block">
-          <h3>1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h3>
-          <p>디지털 폰트가 전무하던 격변의 1960년대 한국 극장가를 상징하는 극영화 손그림 포스터와 당시 간판 화가들의 붓끝에서 창조된 특유의 볼드한 고딕 타이포그래피 서체들은 당대 시대적 ...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="editorial-block">
-          <h3>전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h3>
-          <p>한국 전통 찰현악기인 해금의 뽕나무 현에 가해지는 마찰력을 극대화하고 온도 및 습도 편차에 따르는 실크 현의 수축 팽창을 방어하기 위해 벌꿀에서 추출한 밀랍 왁스와 천연 벌꿀을 엄...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="editorial-block">
-          <h3>활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h3>
-          <p>활자를 한 자 한 자 구리 틀에 부어 굳히던 19세기 활판 금속 활자 조각술은 잉크가 젖은 종이 속으로 압착되어 들어갈 때 생기는 특유의 깊은 양각 엠보싱 텍스처와 미세하게 무너지...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="editorial-block">
-          <h3>아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="editorial-block">
-          <h3>아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
+        <div class="logo">
+            <span>✧</span> 셔츠<span>룸</span> bro
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 EDITORIAL.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
-  </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav>
+            <a href="#">홈</a>
+            <a href="#">후기</a>
+            <a href="#">정보</a>
+            <a href="#">예약</a>
+        </nav>
+        <label for="menu-toggle" class="overlay"></label>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero wrapper">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <h1>강서 셔츠룸<br>추천 bro</h1>
+                    <div class="hero-sub">리얼 후기 &amp; 베스트 초이스</div>
+                    <a href="tel:010-6279-0862" class="hero-cta">☎ 지금 전화</a>
+                </div>
+                <div class="hero-visual">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRO -->
+        <section class="intro wrapper">
+            <div class="intro-grid">
+                <h2>🔥 강서 셔츠룸 끝판왕</h2>
+                <div class="intro-box">
+                    <h3>✦ 시스템 &amp; 분위기</h3>
+                    <ul>
+                        <li>⏱ 실시간 예약 &amp; 콜</li>
+                        <li>🎤 최신 음향 &amp; 조명</li>
+                        <li>🛋 프리미엄 라운지</li>
+                        <li>🍾 VIP 룸 별도</li>
+                    </ul>
+                </div>
 </body>
 </html>
